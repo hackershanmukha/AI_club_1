@@ -15,10 +15,10 @@ for name, marks in students.items():
     for mark in marks:
         total += mark
 
-    average = total / len(marks) - 1
+    average = total / len(marks)
     averages[name] = average
 
-highest = max(averages)
+highest = max(averages,key=averages.get)
 
 print("Student Averages:")
 for name, average in averages.items():
